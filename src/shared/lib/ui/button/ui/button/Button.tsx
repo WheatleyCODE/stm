@@ -9,15 +9,15 @@ export const Button: FC<IButtonProps> = memo((props) => {
     text,
     bStyle = 'square',
     bSize = 'normal',
-    bColor = 'primary',
+    dsColor = 'primary',
     minWidth = 60,
     ...anotherProps
   } = props;
 
-  const classes = [className, s[bStyle], s[bSize], s[bColor]];
+  const classes = [className, s[bStyle], s[bSize], s[dsColor]];
 
   return (
-    <button {...anotherProps} style={{ minWidth }} className={classNames(s.button, classes)}>
+    <button style={{ minWidth }} {...anotherProps} className={classNames(s.button, classes)}>
       {text}
     </button>
   );
