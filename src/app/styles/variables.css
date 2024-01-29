@@ -18,11 +18,12 @@
   --color-border: #b3b3b3;
 
   --color-red: rgb(202 42 42);
-  --color-white: white;
+  --color-white: #F4F6FB;
 
   --app-header-height: 60px;
 
   --default-element-height: 40px;
+  --minimal-element-height: 30px;
 
   --gap: 5px;
   --border-radius: 5px;
