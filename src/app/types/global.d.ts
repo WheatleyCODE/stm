@@ -9,3 +9,5 @@ declare module '*.css' {
 declare interface FCProps {
   children?: React.ReactNode;
 }
+
+declare type WithHookResult<EL extends HTMLElement, SP extends object> = Omit<React.HTMLAttributes<EL>, keyof SP> & SP;

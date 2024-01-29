@@ -1,0 +1,66 @@
+.input_container {
+  position: relative;
+  height: var(--default-element-height);
+  background-color: var(--color-main);
+}
+
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  height: var(--default-element-height);
+  transition: all var(--animation-duration);
+  padding-left: calc(var(--gap) * 4);
+}
+
+
+/* Danger */
+.danger {
+  border: 1px solid var(--color-danger);
+}
+
+.danger:hover {
+  box-shadow: 0 0 3px 0 var(--color-danger);
+}
+
+.danger:focus {
+  box-shadow: 0 0 3px 1px var(--color-danger);
+}
+
+/* Secondary */
+.secondary {
+  border: 1px solid var(--color-secondary);
+}
+
+.secondary:hover {
+  box-shadow: 0 0 3px 0 var(--color-secondary);
+}
+
+.secondary:focus {
+  box-shadow: 0 0 3px 1px var(--color-secondary);
+}
+
+/* Primary */
+.primary {
+  border: 1px solid var(--color-primary);
+}
+
+.primary:hover {
+  box-shadow: 0 0 3px 0 var(--color-secondary);
+}
+
+.primary:focus {
+  box-shadow: 0 0 3px 1px var(--color-primary);
+}
+
+/* White */
+.white {
+  border: 1px solid var(--color-text);
+}
+
+.white:hover {
+  box-shadow: 0 0 3px 0 var(--color-text);
+}
+
+.white:focus {
+  box-shadow: 0 0 3px 1px var(--color-text);
+}
