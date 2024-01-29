@@ -1,0 +1,33 @@
+:root {
+  --color-main: #F4F6FB;
+  --color-main-invert: #282c34;
+  --color-accent: #F4F6FB;
+  --color-primary: #4ca31a;
+  --color-secondary: #3067dd;
+  --color-danger: #cc5a2d;
+  
+  --color-text-invert: #F4F6FB;
+  --color-text: #202127;
+  --color-text-1: #444;
+  --color-text-2: #3b3b3b;
+  --color-text-3: #909090;
+  --color-text-4: #d1d1d1;
+  
+  --color-disable: #383a3f;
+  
+  --color-border: #b3b3b3;
+
+  --color-red: rgb(202 42 42);
+  --color-white: white;
+
+  --app-header-height: 60px;
+
+  --default-element-height: 40px;
+
+  --gap: 5px;
+  --border-radius: 5px;
+  --font-size: 1rem;
+  --animation-duration: 0.1s;
+
+  --max-width: 1200px;
+}
