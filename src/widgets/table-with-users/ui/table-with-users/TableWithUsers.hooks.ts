@@ -42,7 +42,7 @@ export const useUsersSlice = () => {
     }
   }, [filterStr]);
 
-  const filterUserByStr = useCallback(
+  const filterUsersByStr = useCallback(
     (value: string) => {
       setFilteredUsers(getFilteredUsers(users, value));
       setFilterStr(value);
@@ -50,7 +50,7 @@ export const useUsersSlice = () => {
     [users],
   );
 
-  const debouncedFilterByStr = useDebounce(filterUserByStr, 300);
+  const debouncedFilterUsersByStr = useDebounce(filterUsersByStr, 300);
 
   return {
     users,
@@ -61,7 +61,7 @@ export const useUsersSlice = () => {
     error,
     fetchInitUsers,
     fetchMoreUsers,
-    filterUserByStr,
-    debouncedFilterByStr,
+    filterUsersByStr,
+    debouncedFilterUsersByStr,
   };
 };

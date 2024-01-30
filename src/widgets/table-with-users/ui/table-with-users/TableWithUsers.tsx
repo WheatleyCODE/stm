@@ -20,8 +20,8 @@ export const TableWithUsers: FC<ITableWithUsersProps> = memo((props) => {
     error,
     fetchInitUsers,
     fetchMoreUsers,
-    filterUserByStr,
-    debouncedFilterByStr,
+    filterUsersByStr,
+    debouncedFilterUsersByStr,
   } = useUsersSlice();
 
   useInitialEffect(fetchInitUsers);
@@ -48,8 +48,8 @@ export const TableWithUsers: FC<ITableWithUsersProps> = memo((props) => {
       <CWidth>
         <UsersFilter
           isMoreLoading={isMoreLoading}
-          filterUserByStr={filterUserByStr}
-          debouncedFilterByStr={debouncedFilterByStr}
+          filterUsersByStr={filterUsersByStr}
+          debouncedFilterUsersByStr={debouncedFilterUsersByStr}
           fetchMoreUsers={fetchMoreUsers}
         />
         <UsersTable users={filteredUsers} />
