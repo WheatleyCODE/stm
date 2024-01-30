@@ -31,4 +31,8 @@
   --animation-duration: 0.1s;
 
   --max-width: 1200px;
+
+  /* Entities */
+  --filters-height: 60px;
+  --table-header-height: 50px;
 }
