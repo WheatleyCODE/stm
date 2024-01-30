@@ -1,8 +1,9 @@
 import { useCallback, useState } from 'react';
-import { UsersService } from '../../model/service/UsersService';
+import { UsersService } from '../../model/services/UsersService';
 import { IUser } from 'src/entities/user';
 import { useDebounce } from 'src/shared/hooks';
 import { getFilteredUsers } from './TableWithUsers.helpers';
+import { FETCH_USER_COUNT } from './TableWithUsers.consts';
 
 export const useUsersSlice = () => {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -16,7 +17,7 @@ export const useUsersSlice = () => {
   const fetchInitUsers = useCallback(async () => {
     try {
       setIsLoading(true);
-      const users = await UsersService.fetchUsers(15);
+      const users = await UsersService.fetchUsers(FETCH_USER_COUNT);
 
       setIsLoading(false);
       setUsers(users);
@@ -30,7 +31,7 @@ export const useUsersSlice = () => {
   const fetchMoreUsers = useCallback(async () => {
     try {
       setIsMoreLoading(true);
-      const users = await UsersService.fetchUsers(15);
+      const users = await UsersService.fetchUsers(FETCH_USER_COUNT);
 
       setIsMoreLoading(false);
       setUsers((p) => [...p, ...users]);
