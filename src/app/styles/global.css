@@ -8,3 +8,7 @@
   font-weight: 300;
   font-size: var(--font-size);
 }
+
+body {
+  min-height: 50vh;
+}

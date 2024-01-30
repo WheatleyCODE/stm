@@ -1,7 +1,7 @@
 :root {
   --color-main: #F4F6FB;
   --color-main-invert: #282c34;
-  --color-accent: #F4F6FB;
+
   --color-primary: #4ca31a;
   --color-secondary: #3067dd;
   --color-danger: #cc5a2d;
@@ -18,7 +18,9 @@
   --color-border: #b3b3b3;
 
   --color-red: rgb(202 42 42);
-  --color-white: #F4F6FB;
+  --color-white: #fff;
+  --color-white-accent: #eef1f8;
+
 
   --app-header-height: 60px;
 

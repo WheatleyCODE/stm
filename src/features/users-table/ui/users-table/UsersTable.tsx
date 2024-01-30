@@ -1,7 +1,6 @@
 import { FC, memo } from 'react';
 import { TableHeader, TableCol, TableBody, TableRow } from 'src/entities/table';
 import { UserImage } from 'src/entities/user';
-import { useTableScroll } from './UsersTable.hooks';
 import { usersTableHeadCols } from './UsersTable.consts';
 import { formatDate } from 'src/shared/lib/utils';
 import { Flex } from 'src/shared/lib/ui/containers';
@@ -20,8 +19,6 @@ const tableHeadCols = usersTableHeadCols.map(({ text, style, size, className }, 
 
 export const UsersTable: FC<IUsersTableProps> = memo((props) => {
   const { className, users, ...anotherProps } = props;
-
-  const { refHeader, refTable } = useTableScroll();
 
   const tableRows = users.map((user) => {
     return (
@@ -55,18 +52,15 @@ export const UsersTable: FC<IUsersTableProps> = memo((props) => {
 
   return (
     <div {...anotherProps} className={classNames(s.users_table, [className])}>
-      <div ref={refHeader} className={s.overflow_header}>
-        <TableHeader>{tableHeadCols}</TableHeader>
-      </div>
-
-      {!users.length && (
-        <Flex className={s.empty_message}>
-          <Text title="Ничего не найдено" tStyle="bold" />
-        </Flex>
-      )}
-
-      <div ref={refTable} className={s.overflow_body}>
+      <div className={s.overflow}>
+        <TableHeader className={s.sticky}>{tableHeadCols}</TableHeader>
         <TableBody>{tableRows}</TableBody>
+
+        {!users.length && (
+          <Flex className={s.empty_message}>
+            <Text title="Ничего не найдено" tStyle="bold" />
+          </Flex>
+        )}
       </div>
     </div>
   );

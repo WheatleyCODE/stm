@@ -3,7 +3,7 @@
   pointer-events: none;
   display: none;
   position: absolute;
-  background-color: var(--color-main);
+  background-color: var(--color-white);
   min-width: 100px;
   min-height: var(--default-element-height);
   border-radius: var(--border-radius);
@@ -17,7 +17,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: var(--color-main);
+  background-color: var(--color-white);
   transform: rotate(45deg);
 }
 

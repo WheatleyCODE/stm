@@ -2,24 +2,6 @@
   width: 100%;
 }
 
-.overflow_header {
-  width: 100%;
-  padding-right: 17px;
-  overflow: hidden;
-  border-top: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
-  border-left: 1px solid var(--color-border);
-}
-
-.overflow_body {
-  transition: all var(--animation-duration);
-  width: 100%;
-  overflow-y: scroll;
-  max-height: 50vh;
-  border-right: 1px solid var(--color-border);
-  border-left: 1px solid var(--color-border);
-}
-
 .users_table .first_col {
   border-left: none;
 }
@@ -36,12 +18,28 @@
   min-width: 140px;
 }
 
-
 .users_table .email_col {
- min-width: 290px;
+  min-width: 290px;
 }
 
 .empty_message {
-  margin-top: calc(var(--gap) * 2);
+  padding: calc(var(--gap) * 2);
   height: var(--default-element-height);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.overflow {
+  position: relative;
+  overflow: auto;
+  height: 50vh;
+  border: 1px solid var(--color-border);
+}
+
+.sticky {
+  top: 0;
+  position: sticky;
+}
+
+.col {
+  background-color: var(--color-white-accent);
 }
