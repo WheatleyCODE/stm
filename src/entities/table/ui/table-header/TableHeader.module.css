@@ -1,5 +1,4 @@
 .table_header {
-  height: var(--table-header-height);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: var(--table-header-height);
 }
