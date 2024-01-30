@@ -29,11 +29,6 @@
   height: calc(var(--default-element-height) * 1.5);
 }
 
-/* Colors */
-.primary {
-  background-color: var(--color-primary);
-}
-
 .danger, .secondary, .primary {
   color: var(--color-white);
 }
@@ -41,6 +36,7 @@
 /* Danger */
 .danger {
   background-color: var(--color-danger);
+  border: 1px solid var(--color-danger);
 }
 
 .danger:hover {
@@ -56,6 +52,7 @@
 /* Secondary */
 .secondary {
   background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }
 
 .secondary:hover {
@@ -71,6 +68,7 @@
 /* Primary */
 .primary {
   background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .primary:hover {
@@ -86,6 +84,7 @@
 /* White */
 .white {
   background-color: var(--color-white);
+  border: 1px solid var(--color-text);
 }
 
 .white:hover {
