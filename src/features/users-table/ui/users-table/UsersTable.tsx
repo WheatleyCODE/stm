@@ -3,6 +3,7 @@ import { TableHeader, TableCol, TableBody, TableRow } from 'src/entities/table';
 import { UserImage } from 'src/entities/user';
 import { useTableScroll } from './UsersTable.hooks';
 import { usersTableHeadCols } from './UsersTable.consts';
+import { formatDate } from 'src/shared/lib/utils';
 import { Flex } from 'src/shared/lib/ui/containers';
 import { Text } from 'src/shared/lib/ui/text';
 import { classNames } from 'src/shared/lib/class-names';
@@ -46,7 +47,7 @@ export const UsersTable: FC<IUsersTableProps> = memo((props) => {
           <Text text={user.phone} tSize="small" />
         </TableCol>
         <TableCol className={s.register_col}>
-          <Text text={'10.20.2022'} tSize="small" />
+          <Text text={formatDate(user.registered.date)} tSize="small" />
         </TableCol>
       </TableRow>
     );
