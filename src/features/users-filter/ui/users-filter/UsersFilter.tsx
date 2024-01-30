@@ -31,10 +31,10 @@ export const UsersFilter: FC<IUsersFilterProps> = memo((props) => {
     <HStack {...anotherProps} className={classNames(s.users_filter, [className])}>
       <Input {...input} onChange={onChange} className={s.input} placeholder="Введите имя" />
 
-      <Button className={s.margin_left} onClick={fetchMoreUsers} text="Загрузить еще" />
-      <Button className={s.margin_left} onClick={resetFilters} dsColor="secondary" text="Сбросить фильтр" />
+      <Button className={s.load} onClick={fetchMoreUsers} text="Загрузить еще" />
+      <Button className={s.reset} onClick={resetFilters} dsColor="secondary" text="Сбросить фильтр" />
 
-      {isMoreLoading && <Loader className={s.margin_left} />}
+      {isMoreLoading && <Loader className={s.loader} />}
     </HStack>
   );
 });

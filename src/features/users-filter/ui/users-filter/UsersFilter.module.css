@@ -5,8 +5,32 @@
 
 .input {
   width: 300px;
+  margin-right: calc(var(--gap) * 2);
 }
 
-.margin_left {
-  margin-left: calc(var(--gap) * 2);
+.load, .reset {
+  margin-right: calc(var(--gap) * 2);
+}
+
+@media screen and (max-width: 650px) {
+  .input {
+    width: 150px;
+  }
+
+  .users_filter {
+    flex-wrap: wrap;
+    height: initial;
+  }
+}
+
+@media screen and (max-width: 483px) {
+  .reset, .loader {
+    margin-top: calc(var(--gap) * 2);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .load {
+    margin-right: 0px;
+  }
 }
