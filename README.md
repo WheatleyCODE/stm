@@ -1,6 +1,6 @@
 STM Labs
 
-### Ссылка на GitHub Pages -
+### Ссылка на GitHub Pages - https://wheatleycode.github.io/stm/
 
 ## Архитектура
 
