@@ -1,0 +1,30 @@
+.user_image {
+}
+
+.thumbnail {
+  height: var(--minimal-element-height);
+  border-radius: 50%;
+}
+
+.large {
+  height: 150px;
+  border-radius: 50%;
+}
+
+.tooltip_container {
+  position: relative;
+}
+
+.tooltip {
+  left: 0;
+  width: 160px;
+  height: 160px;
+}
+
+.tooltip.bottom {
+  top: calc(var(--gap) * 2);
+}
+
+.tooltip.top {
+  top: calc(-160px - var(--default-element-height));
+}
