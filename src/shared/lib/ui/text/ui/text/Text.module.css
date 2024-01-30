@@ -1,0 +1,66 @@
+.text_container {
+  color: var(--color-text);
+} 
+
+.text {
+  font-size: var(--font-size);
+}
+
+.title {
+  font-size: calc(var(--font-size) * 1.2);
+}
+
+/* Style */
+.italic {
+  font-style: italic;
+}
+
+.thin {
+  font-style: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Size */
+.text.small {
+  font-size: calc(var(--font-size) * 0.9);
+}
+
+.text.normal {
+  font-size: var(--font-size);
+}
+
+.text.big {
+  font-size: calc(var(--font-size) * 1.1);
+}
+
+.title.small {
+  font-size: calc(var(--font-size) * 1.1);
+}
+
+.title.normal {
+  font-size: calc(var(--font-size) * 1.2);
+}
+
+.title.big {
+  font-size: calc(var(--font-size) * 1.3);
+}
+
+/* Colors */
+.white {
+  color: var(--color-white);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+.danger {
+  color: var(--color-secondary);
+}
