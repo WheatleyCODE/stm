@@ -1,8 +1,8 @@
 import { FC, memo, useEffect, useState } from 'react';
+import { ANIMATION_DURATION_MS } from 'src/shared/consts';
 import { classNames } from '../../../../class-names';
 import type { ITooltipProps } from './Tooltip.interface';
 import s from './Tooltip.module.css';
-import { ANIMATION_DURATION_MS } from 'src/shared/consts';
 
 export const Tooltip: FC<ITooltipProps> = memo((props) => {
   const { className, children, isShow, open = 'bottom', ...anotherProps } = props;
