@@ -9,8 +9,8 @@ export const TableHeader: FC<ITableHeaderProps> = (props) => {
 
   return (
     <div
-      {...anotherProps}
       style={{ gridTemplateColumns: getGridTemplateCols(children) }}
+      {...anotherProps}
       className={classNames(s.table_header, [className])}
     >
       {children}

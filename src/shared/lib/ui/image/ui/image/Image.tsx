@@ -1,9 +1,7 @@
 import { FC, memo, useLayoutEffect, useState } from 'react';
-import { classNames } from '../../../../class-names';
 import { ImageError } from '../image-error/ImageError';
 import { ImageLoad } from '../image-load/ImageLoad';
 import type { IImageProps } from './Image.interface';
-import s from './Image.module.css';
 
 export const Image: FC<IImageProps> = memo((props) => {
   const { className, src, alt = 'image', errorFallback, fallback, ...otherProps } = props;
@@ -34,5 +32,5 @@ export const Image: FC<IImageProps> = memo((props) => {
     return <ImageError {...otherProps} />;
   }
 
-  return <img {...otherProps} className={classNames(s.image, [className])} src={src} alt={alt} />;
+  return <img {...otherProps} className={className} src={src} alt={alt} />;
 });
