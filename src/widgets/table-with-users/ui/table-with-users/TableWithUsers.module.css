@@ -1,0 +1,8 @@
+.table_with_users {
+  padding: calc(var(--gap) * 2);
+}
+
+.full {
+  width: 100%;
+  height: 100vh;
+}
