@@ -1,0 +1,12 @@
+.users_filter {
+  padding: calc(var(--gap) * 2) 0;
+  height: var(--filters-height);
+}
+
+.input {
+  width: 300px;
+}
+
+.margin_left {
+  margin-left: calc(var(--gap) * 2);
+}
