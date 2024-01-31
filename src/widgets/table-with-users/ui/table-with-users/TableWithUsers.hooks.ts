@@ -1,9 +1,9 @@
 import { useCallback, useState } from 'react';
 import { UsersService } from '../../model/services/UsersService';
-import { IUser } from 'src/entities/user';
 import { useDebounce } from 'src/shared/hooks';
 import { getFilteredUsers } from './TableWithUsers.helpers';
 import { FETCH_USER_COUNT } from './TableWithUsers.consts';
+import type { IUser } from 'src/entities/user';
 
 export const useUsersSlice = () => {
   const [users, setUsers] = useState<IUser[]>([]);

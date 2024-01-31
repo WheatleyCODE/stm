@@ -5,6 +5,7 @@ import { usersTableHeadCols } from './UsersTable.consts';
 import { formatDate } from 'src/shared/lib/utils';
 import { Flex } from 'src/shared/lib/ui/containers';
 import { Text } from 'src/shared/lib/ui/text';
+import { checkIsLast } from './UsersTable.utils';
 import { classNames } from 'src/shared/lib/class-names';
 import type { IUsersTableProps } from './UsersTable.interface';
 import s from './UsersTable.module.css';
@@ -17,7 +18,7 @@ const tableHeadCols = usersTableHeadCols.map(({ text, style, size, className }, 
   }
 
   return (
-    <TableCol className={classNames(s.head_col, classes, { [s.first_col]: i === 0 })}>
+    <TableCol key={text} className={classNames(s.head_col, classes, { [s.first_col]: i === 0 })}>
       <Text text={text} tStyle={style} tSize={size} />
     </TableCol>
   );
@@ -28,7 +29,13 @@ export const UsersTable: FC<IUsersTableProps> = memo((props) => {
 
   const tableRows = users.map((user, i) => {
     return (
-      <TableRow className={i === 0 ? s.first_row : undefined}>
+      <TableRow
+        key={user.cell}
+        className={classNames(s.row, [], {
+          [s.first_row]: i === 0,
+          [s.last_row]: checkIsLast(i, users),
+        })}
+      >
         <TableCol className={classNames(s.col, [s.first_col, s.name_col])}>
           <Text text={`${user.name.first} ${user.name.last}`} tSize="small" />
         </TableCol>

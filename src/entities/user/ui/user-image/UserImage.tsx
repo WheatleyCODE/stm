@@ -1,4 +1,4 @@
-import { FC, memo, useCallback, useRef } from 'react';
+import { FC, memo, useRef } from 'react';
 import { Image } from 'src/shared/lib/ui/image';
 import { Tooltip, TooltipOpen } from 'src/shared/lib/ui/tooltip';
 import { useDelayHover } from 'src/shared/hooks';
@@ -12,14 +12,14 @@ export const UserImage: FC<IUserImageProps> = memo((props) => {
 
   const { isShow, onMouseEnter, onMouseLeave, onMouseMove } = useDelayHover(false, 500, 300, 300);
 
-  const checkPosition = useCallback(() => {
+  const checkPosition = () => {
     if (!ref.current) return;
 
     const { height } = document.body.getBoundingClientRect();
     const { top } = ref.current.getBoundingClientRect();
 
     return height / 2 > top;
-  }, []);
+  };
 
   const open: TooltipOpen = checkPosition() ? 'bottom' : 'top';
 
